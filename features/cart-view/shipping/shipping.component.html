@@ -1,0 +1,35 @@
+<!-- Turn into reactive form -->
+<div
+  class="flex flex-column align-items-center justify-content-center gap-4 border-1 border-round-2xl border-surface my-4 p-3">
+  <div class="w-full">
+    <span class="center font-light">Shipping details</span>
+    <p-divider class="w-full p-0 m-0"></p-divider>
+  </div>
+  <div class="mt-2">
+    <input class="mr-5" type="text" pInputText placeholder="Name" [(ngModel)]="name" />
+    <input type="text" pInputText placeholder="Last name" [(ngModel)]="lastName" />
+  </div>
+  <div>
+    <input class="mr-5" type="text" pInputText placeholder="Address" [(ngModel)]="address" />
+    <input type="text" pInputText placeholder="Apartment number" [(ngModel)]="apartmentNumber" />
+  </div>
+  <div>
+    <input class="mr-5" type="text" pInputText placeholder="Postal code" [(ngModel)]="postalCode" />
+    <input type="text" pInputText placeholder="City" [(ngModel)]="city" />
+  </div>
+  <div>
+    <input type="text" pInputText placeholder="Phone number" style="width: 434px!important;"
+      [(ngModel)]="phoneNumber" />
+  </div>
+  <textarea placeholder="More information for delivery..." style="width: 434px!important;" rows="5" cols="30"
+    pInputTextarea [(ngModel)]="additionalInformation"></textarea>
+  <div class="flex flex-column align-items-center justify-content-center text-center">
+    <label for="saveDetails">Save form details. So when you shop next time with us, it will automatically be
+      updated.</label>
+    <div>
+      <span class="font-light">Save form details</span>
+      <p-checkbox class="px-2" name="saveDetails" value="formDetails" [inputId]="saveFormDetails"></p-checkbox>
+    </div>
+  </div>
+  <p-button [routerLink]="['/cart/overview']" class="align-self-end" label="View order"></p-button>
+</div>

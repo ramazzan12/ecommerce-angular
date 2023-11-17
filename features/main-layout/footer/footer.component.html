@@ -1,0 +1,39 @@
+<div
+  class="flex align-items-center justify-content-around border-1 border-blue-100 border-round-top surface-50 w-full h-10rem">
+  <div>
+    <span (click)="toHome()"
+      class="font-bold text-xl transition-duration-300 hover:text-gray-700 cursor-pointer">Shoply</span>
+  </div>
+  <div class="flex align-items-center gap-4 justify-content-between w-3">
+    <div class="flex flex-column gap-2">
+      <a class="no-underline text-900" [routerLink]="['home']">
+        <span class="font-light transition-duration-300 hover:text-primary cursor-pointer">Home</span>
+      </a>
+      <a class="no-underline text-900" [routerLink]="['products/search']">
+        <span class="font-light transition-duration-300 hover:text-primary cursor-pointer">Products</span>
+      </a>
+      <a class="no-underline text-900" [routerLink]="['categories']">
+        <span class="font-light transition-duration-300 hover:text-primary cursor-pointer">Categories</span>
+      </a>
+    </div>
+    <div class="flex flex-column gap-2">
+      <a class="no-underline text-900" [routerLink]="['login']">
+        <span class="font-light transition-duration-300 hover:text-primary cursor-pointer">Login</span>
+      </a>
+      <a class="no-underline text-900" [routerLink]="['register']">
+        <span class="font-light transition-duration-300 hover:text-primary cursor-pointer">Register</span>
+      </a>
+      <span class="font-light transition-duration-300 hover:text-primary cursor-pointer">Contact</span>
+    </div>
+  </div>
+  <div class="flex align-items-center justify-content-center gap-4">
+    <span>
+      <i (click)="openLink('https://www.linkedin.com/in/luka-golubovic')"
+        class="pi pi-linkedin cursor-pointer transition-duration-300 hover:text-blue-700" style="font-size: 2rem"></i>
+    </span>
+    <span>
+      <i (click)="openLink('https://github.com/golubovicluka')"
+        class="pi pi-github cursor-pointer hover:text-gray-800 transition-duration-300" style="font-size: 2rem"></i>
+    </span>
+  </div>
+</div>
